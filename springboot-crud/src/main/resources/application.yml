@@ -1,0 +1,22 @@
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///libraryms?serverTimezone=GMT%2b8
+    username: root
+    password: root
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+
+server:
+  port: 6234
+
+mybatis:
+  type-aliases-package: com.mai.springbootlibraryms.pojo
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mai.springbootlibraryms.mapper.UserMapper">
+    <update id="update">
+        update user set name = #{name},age = #{age},
+                        sex = #{sex},phone = #{phone},
+                        address = #{address}, updatetime = #{updatetime}
+        where id = #{id}
+
+    </update>
+    <delete id="deleteById">
+        delete from user where id = #{id}
+    </delete>
+
+    <select id="findAll" resultType="User">
+        select * from user
+    </select>
+
+    <select id="listByCondition" resultType="User">
+        select * from user
+        <where>
+            <if test="name != null and name != ''">
+                name like concat('%', #{name}, '%')
+            </if>
+        </where>
+                order by id
+    </select>
+    <select id="getById" resultType="User">
+        select * from user where id = #{id}
+    </select>
+
+    <insert id="save">
+        insert into user(name, username, age, sex, phone, address, createtime)
+        values (#{name}, #{username}, #{age}, #{sex}, #{phone}, #{address}, #{createtime})
+    </insert>
+
+</mapper>
