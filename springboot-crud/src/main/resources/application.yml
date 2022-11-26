@@ -16,7 +16,7 @@ server:
   port: 6234
 
 mybatis:
-  type-aliases-package: com.mai.springbootlibraryms.pojo
+  type-aliases-package: com.mai.boot.pojo
   mapper-locations: classpath:mapper/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.mai.springbootlibraryms.mapper.UserMapper">
+<mapper namespace="com.mai.boot.mapper.UserMapper">
     <update id="update">
         update user set name = #{name},age = #{age},
                         sex = #{sex},phone = #{phone},

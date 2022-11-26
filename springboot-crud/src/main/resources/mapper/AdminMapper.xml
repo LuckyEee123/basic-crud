@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.mai.springbootlibraryms.mapper.AdminMapper">
+<mapper namespace="com.mai.boot.mapper.AdminMapper">
     <update id="update">
         update admin set username = #{username},password = #{password},
                         email = #{email},phone = #{phone},
@@ -31,7 +31,7 @@
     <select id="getById" resultType="Admin">
         select * from admin where id = #{id}
     </select>
-    <select id="login" resultType="com.mai.springbootlibraryms.pojo.Admin">
+    <select id="login" resultType="com.mai.boot.pojo.Admin">
         select * from admin where username = #{username}
                             and   password = #{password}
     </select>
